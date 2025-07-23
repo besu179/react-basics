@@ -1,14 +1,19 @@
-import { useState } from "react";
+interface CounterProps {
+  count: number;
+  handleAdd: () => void;
+  handleReset: () => void;
+}
 
-export default function Counter() {
-  const [count, setCount] = useState(0);
-
+export default function Counter({
+  count,
+  handleAdd,
+  handleReset,
+}: CounterProps) {
   return (
     <>
-      <h1>this is an example of usestate usage</h1>
       <h3>count: {count}</h3>
-      <button onClick={() => setCount(count + 1)}>count</button>
-      <button onClick={()=> setCount(0)}>reset</button>
+      <button onClick={handleAdd}>count</button>
+      <button onClick={handleReset}>reset</button>
     </>
   );
 }
