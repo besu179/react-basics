@@ -1,5 +1,5 @@
-import Square from "./tic-tac-toe/Square";
+import Board from "./tic-tac-toe/Square";
 
 export default function App() {
-  return <Square />;
+  return <Board />;
 }
